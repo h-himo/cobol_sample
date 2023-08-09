@@ -6,6 +6,8 @@ on:
 jobs:
   run-sample-program:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Install dependencies
         run: |
