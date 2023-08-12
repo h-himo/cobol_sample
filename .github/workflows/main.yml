@@ -27,7 +27,7 @@ jobs:
       - name: Run EMPSEARCH and EMPREAD
         run: |
           cobj EMPSEARCH.cbl EMPREAD.cbl
-          echo 0011 | java EMPWSEARCH
+          echo 0011 | java EMPSEARCH
 
       - name: Run EmpSearchDemo
         run: |
