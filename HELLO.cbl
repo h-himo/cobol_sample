@@ -10,4 +10,3 @@
            DISPLAY "Hello " MY-NAME.
        MAIN-EXIT.
            STOP RUN.
-                     
