@@ -6,34 +6,32 @@ on:
 jobs:
   run-sample-program:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    container:
+      image: opensourcecobol/opensourcecobol4j
     steps:
-      - name: Install dependencies
+      
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Run HELLO
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y build-essential bison flex gettext texinfo automake autoconf
-      - name: Setup JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: temurin
-          java-version: 17
+          cobj HELLO.cbl
+          echo mytest | java HELLO
 
-      - name: Install opensource COBOL 4J
+      - name: Run EMPWRITE and EMPLIST
         run: |
-          gh repo clone opensourcecobol/opensourcecobol4j
-          mkdir ~/.java_lib
-          curl -L -o ~/.java_lib/sqlite.jar https://github.com/xerial/sqlite-jdbc/releases/download/3.36.0.3/sqlite-jdbc-3.36.0.3.jar
-          export CLASSPATH=":$HOME/.java_lib/sqlite.jar"
-          cd opensourcecobol4j
-          ./configure --prefix=/usr/
-          make
-          sudo make install
-          echo "CLASSPATH=:/usr/lib/opensourcecobol4j/libcobj.jar:$HOME/.java_lib/sqlite.jar" >> $GITHUB_ENV
-      - name: Compile sample programs
-        run: |
-          export JAVA_INC=/usr/lib/jvm/temurin-17-jdk-amd64/include
-          cobj EMPWRITE.cbl
+          cobj EMPWRITE.cbl EMPLIST.cbl
           java EMPWRITE
-          
-          
+          java EMPLIST
+      
+      - name: Run EMPSEARCH and EMPREAD
+        run: |
+          cobj EMPSEARCH.cbl EMPREAD.cbl
+          echo 0011 | java EMPWSEARCH
+
+      - name: Run EmpSearchDemo
+        run: |
+          javac EmpSearchDemo.java
+          java EmpSearchDemo
+
+
