@@ -19,4 +19,4 @@
   * EmpSearchDemo.java ... 従業員情報を検索して画面に表示するJavaプログラム
 
 ---
-(c)2023 Tokyo System House Co., Ltd. All Rights Reserved.
+Copyright 2023 TOKYO SYSTEM HOUSE CO., LTD. All Rights Reserved.
