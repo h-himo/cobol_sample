@@ -23,7 +23,8 @@ jobs:
           cobj EMPWRITE.cbl EMPLIST.cbl
           java EMPWRITE
           java EMPLIST > EMPLIST2.txt
-          diff -b EMPLIST1.txt EMPLIST2.txt
+          diff -b EMPLIST1.txt EMPLIST2.txt > result.txt
+          cat result.txt
       
       - name: Run EMPSEARCH and EMPREAD
         run: |
