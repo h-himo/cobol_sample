@@ -22,7 +22,8 @@ jobs:
         run: |
           cobj EMPWRITE.cbl EMPLIST.cbl
           java EMPWRITE
-          java EMPLIST
+          java EMPLIST > EMPLIST.txt
+          cat EMPLIST.txt
       
       - name: Run EMPSEARCH and EMPREAD
         run: |
