@@ -16,6 +16,9 @@ jobs:
       - name: Show cobj version
         run: |
           cobj -version
+
+      - name: Show diffutils version
+        run: |
           diff -v
 
       - name: Run HELLO
@@ -27,7 +30,12 @@ jobs:
         run: |
           cobj EMPWRITE.cbl EMPLIST.cbl
           java EMPWRITE
-          java EMPLIST
+          java EMPLIST > EMPLIST.log
+          cat EMPLIST.log
+
+      - name: EMPLIST old and new comparison
+        run: |
+          diff EMPLIST.new EMPLIST.log
       
       - name: Run EMPSEARCH and EMPREAD
         run: |
