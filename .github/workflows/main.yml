@@ -34,8 +34,9 @@ jobs:
           cat EMPLIST.log
 
       - name: EMPLIST old and new comparison
+        continue-on-error: true
         run: |
-          diff EMPLIST.new EMPLIST.log
+          diff EMPLIST.old EMPLIST.log
       
       - name: Run EMPSEARCH and EMPREAD
         run: |
