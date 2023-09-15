@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/root/.java_lib/sqlite.jar",
+        "/usr/lib/opensourcecobol4j/libcobj.jar"
+    ]
+}
