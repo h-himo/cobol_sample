@@ -16,6 +16,7 @@ jobs:
       - name: Show cobj version
         run: |
           cobj -version
+          diff -v
 
       - name: Run HELLO
         run: |
