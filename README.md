@@ -1,4 +1,4 @@
-# シェルスクリプトマガジン<br>『OSSで始める最新COBOL入門』<br>例題プログラム
+# シェルスクリプトマガジン<br>『OSSで始める最新COBOL入門』
 
 記事「OSSで始めるCOBOL入門」の例題プログラムを公開しています。
 
@@ -12,7 +12,7 @@
 * プログラムの呼び出し
   * 図9 EMPSEARCH.cbl ... 従業員情報を検索して画面に表示します
   * 図10 EMPREAD.cbl ... 親プログラムから従業員コードを受け取り、EMPFILEのマッチしたレコードを返します
-  * 図11 EmpSearchDemo.java ... 従業員情報を検索して画面に表示するJavaプログラム
+  * 図11 EmpSearchDemo.java ... 従業員情報を検索して画面に表示するJavaプログラムです
 
 ---
 Copyright 2023 TOKYO SYSTEM HOUSE CO., LTD. All Rights Reserved.
