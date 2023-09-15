@@ -23,14 +23,14 @@ jobs:
 
       - name: Create old files
         run: |
-          cat *** Employee List *** > EMPLIST.old
-          cat ID   Employee Name        Dpt Enter date >> EMPLIST.old
-          cat ---- -------------------- --- ---------- >> EMPLIST.old
-          cat 0012 Chiba Jiro            02 1999/04/01 >> EMPLIST.old
-          cat 0013 Tokyo Taro            03 1997/04/01 >> EMPLIST.old
-          cat 0014 Kanagawa Shiro        01 2012/04/01 >> EMPLIST.old
-          cat 0015 Niigata  Goroo        02 2001/04/01 >> EMPLIST.old
-          cat EOF >> EMPLIST.old
+          echo *** Employee List *** > EMPLIST.old
+          echo ID   Employee Name        Dpt Enter date >> EMPLIST.old
+          echo ---- -------------------- --- ---------- >> EMPLIST.old
+          echo 0012 Chiba Jiro            02 1999/04/01 >> EMPLIST.old
+          echo 0013 Tokyo Taro            03 1997/04/01 >> EMPLIST.old
+          echo 0014 Kanagawa Shiro        01 2012/04/01 >> EMPLIST.old
+          echo 0015 Niigata  Goroo        02 2001/04/01 >> EMPLIST.old
+          echo EOF >> EMPLIST.old
 
       - name: Run HELLO
         run: |
