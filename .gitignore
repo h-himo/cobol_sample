@@ -1,5 +1,7 @@
 .vscode/
 /*.class
+/*.log
+/*.txt
 /EMPFILE
 /EMPLIST.java
 /EMPREAD.java
