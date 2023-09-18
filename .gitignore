@@ -2,6 +2,7 @@
 /*.class
 /*.log
 /*.txt
+/*.so
 /EMPFILE
 /EMPLIST.java
 /EMPREAD.java
