@@ -15,7 +15,7 @@ jobs:
 
       - name: Install diffutils
         run: |
-          dnf update
+          dnf -y update
           dnf install -y diffutils
 
       - name: Create old files
